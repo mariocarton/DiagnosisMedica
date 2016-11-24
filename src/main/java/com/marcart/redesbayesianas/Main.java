@@ -25,7 +25,7 @@ public class Main {
      */
     public static void main(String[] args) {
        
-        String ub = "D:\\mario\\Desktop\\red.xdsl";
+        String ub = "./src/main/java/com/marcart/redesbayesianas/red.xdsl";
         LectorXDSL lector = new LectorXDSL();
         
         BayesNet net = lector.leeRed(ub);
