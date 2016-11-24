@@ -24,7 +24,7 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       
+       //Comentarop
         String ub = "./src/main/java/com/marcart/redesbayesianas/red.xdsl";
         LectorXDSL lector = new LectorXDSL();
         
