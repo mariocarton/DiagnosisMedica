@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jLabel1"/>
+      </Properties>
+    </Component>
+  </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="title" type="java.lang.String" value="Diagnosis de Enfermedades Pulmonares"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -23,64 +31,48 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
-              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-          </Group>
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+              <EmptySpace pref="35" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="515" max="-2" attributes="0"/>
-                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="99" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="label_viajeasia" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_antecedentesepoc" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_embarazo" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="label_contaminantesquimicos" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="label_contactoneumonia" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="label_gripe" min="-2" max="-2" attributes="0"/>
-                          <Component id="label_viajeasia" min="-2" max="-2" attributes="0"/>
-                          <Component id="label_contactotuberculosis" min="-2" max="-2" attributes="0"/>
-                          <Component id="label_fumador" min="-2" max="-2" attributes="0"/>
-                          <Component id="label_antecedentesasma" min="-2" max="-2" attributes="0"/>
-                          <Component id="label_exposicionalergenos" min="-2" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <Component id="label_antecedentescancer" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Group type="103" groupAlignment="1" attributes="0">
-                                              <Component id="label_embarazo" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="label_obesidad" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Component id="label_antecedentesepoc" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_contaminantesquimicos" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_antecedentescancer" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_antecedentesasma" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_contactoneumonia" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_contactotuberculosis" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_exposicionalergenos" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_fumador" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_obesidad" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
-                                      <Component id="radio_antecedentesepocsi" min="-2" max="-2" attributes="0"/>
+                                      <Component id="radio_fumadorsi" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="radio_antecedentesepocno" min="-2" max="-2" attributes="0"/>
+                                      <Component id="radio_fumadorno" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="radio_antecedentesepocnsnc" min="-2" max="-2" attributes="0"/>
+                                      <Component id="radio_fumadornsnc" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" attributes="0">
-                                      <Component id="radio_obesidadsi" min="-2" max="-2" attributes="0"/>
+                                      <Component id="radio_exposicionalergenossi" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="radio_obesidadno" min="-2" max="-2" attributes="0"/>
+                                      <Component id="radio_exposicionalergenosno" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="radio_obesidadnsnc" min="-2" max="-2" attributes="0"/>
+                                      <Component id="radio_exposicionalergenosnsnc" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Component id="radio_contactotuberculosissi" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="radio_contactotuberculosisno" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="radio_contactotuberculosisnsnc" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" attributes="0">
                                       <Component id="radio_contactoneumoniasi" min="-2" max="-2" attributes="0"/>
@@ -90,18 +82,32 @@
                                       <Component id="radio_contactoneumoniansnc" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" attributes="0">
-                                      <Component id="radio_contaminantesquimicossi" min="-2" max="-2" attributes="0"/>
+                                      <Component id="radio_antecedentesasmasi" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="radio_contaminantesquimicosno" min="-2" max="-2" attributes="0"/>
+                                      <Component id="radio_antecedentesasmano" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="radio_contaminantesquimicosnsnc" min="-2" max="-2" attributes="0"/>
+                                      <Component id="radio_antecedentesasmansnc" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <Group type="102" alignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
                                       <Component id="radio_antecedentescancersi" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="radio_antecedentescancerno" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="radio_antecedentescancernsnc" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Component id="radio_antecedentesepocsi" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="radio_antecedentesepocno" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="radio_antecedentesepocnsnc" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Component id="radio_contaminantesquimicossi" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="radio_contaminantesquimicosno" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="radio_contaminantesquimicosnsnc" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="radio_embarazosi" min="-2" max="-2" attributes="0"/>
@@ -111,131 +117,289 @@
                                       <Component id="radio_embarazonsnc" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="radio_gripesi" min="-2" max="-2" attributes="0"/>
+                                      <Component id="radio_obesidadsi" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="radio_gripeno" min="-2" max="-2" attributes="0"/>
+                                      <Component id="radio_obesidadno" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="radio_gripensnc" min="-2" max="-2" attributes="0"/>
+                                      <Component id="radio_obesidadnsnc" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="radio_viajeasiasi" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Component id="radio_viajeasiasi" min="-2" max="-2" attributes="0"/>
+                                          <Component id="radio_gripesi" min="-2" max="-2" attributes="0"/>
+                                      </Group>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="radio_viajeasiano" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="radio_viajeasiansnc" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="radio_contactotuberculosissi" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="radio_contactotuberculosisno" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="radio_contactotuberculosisnsnc" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="radio_fumadorsi" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="radio_fumadorno" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="radio_fumadornsnc" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="radio_antecedentesasmasi" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="radio_antecedentesasmano" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="radio_antecedentesasmansnc" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="radio_exposicionalergenossi" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="radio_exposicionalergenosno" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="radio_exposicionalergenosnsnc" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <Component id="radio_gripeno" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="radio_gripensnc" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" attributes="0">
+                                              <Component id="radio_viajeasiano" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="radio_viajeasiansnc" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
                                   </Group>
                               </Group>
                           </Group>
+                          <Component id="label_gripe" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="check_insuficienciarenal" min="-2" max="-2" attributes="0"/>
-                          <Component id="check_faltaapetito" min="-2" max="-2" attributes="0"/>
-                          <Component id="check_broncoespasmo" min="-2" max="-2" attributes="0"/>
-                          <Component id="check_taquicardia" min="-2" max="-2" attributes="0"/>
-                          <Component id="check_fiebre" min="-2" max="-2" attributes="0"/>
-                          <Component id="check_tossangre" min="-2" max="-2" attributes="0"/>
-                          <Component id="check_dolortoracico" min="-2" max="-2" attributes="0"/>
-                          <Component id="check_tosseca" min="-2" max="-2" attributes="0"/>
-                          <Component id="check_disnea" min="-2" max="-2" attributes="0"/>
-                          <Component id="check_perdidapeso" min="-2" max="-2" attributes="0"/>
-                          <Component id="check_sudoraciones" min="-2" max="-2" attributes="0"/>
-                          <Component id="check_tosesputo" min="-2" max="-2" attributes="0"/>
-                          <Component id="check_oxigenobajo" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="check_trombosis" min="-2" max="-2" attributes="0"/>
-                          <Component id="check_cianosis" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_sudoraciones" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_perdidapeso" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="label_cianosis" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_broncoespasmo" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="label_oxigenosangre" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="label_insuficienciarenal" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="label_fiebre" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="label_faltaapetito" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="label_tossangre" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="label_tosseca" min="-2" max="-2" attributes="0"/>
+                                              <Component id="label_trombosis" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="radio_faltaapetitosi" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="radio_faltaapetitono" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="radio_faltaapetitonsnc" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="radio_fiebresi" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="radio_fiebreno" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="radio_fiebrensnc" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="radio_insuficienciarenalsi" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="radio_insuficienciarenalno" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="radio_insuficienciarenalnsnc" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="radio_oxigenosangresi" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="radio_oxigenosangreno" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="radio_oxigenosangrensnc" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="radio_perdidapesosi" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="radio_perdidapesono" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="radio_perdidapesonsnc" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="radio_sudoracionessi" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="radio_sudoracionesno" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="radio_sudoracionesnsnc" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="radio_taquicardiasi" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="radio_taquicardiano" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="radio_taquicardiansnc" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="radio_tosesputosi" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="radio_tosesputono" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="radio_tosesputonsnc" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="radio_tossangresi" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="radio_tossangreno" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="radio_tossangrensnc" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="radio_tossecasi" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="radio_tossecano" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="radio_tossecansnc" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="radio_trombosissi" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="radio_trombosisno" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="radio_trombosisnsnc" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="label_dolortoracico" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="label_disnea" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="radio_disneasi" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="radio_disneano" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="radio_disneansnc" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="radio_dolortoracicosi" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="radio_dolortoracicono" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="radio_dolortoraciconsnc" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="radio_cianosissi" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="radio_cianosisno" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="radio_cianosisnsnc" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="radio_broncoespasmosi" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="radio_broncoespasmono" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="radio_broncoespasmonsnc" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                                  <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_tosesputo" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_taquicardia" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel9" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel10" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel11" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel12" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <Component id="radio_trombosissi8" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="radio_trombosisno8" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="radio_trombosisnsnc8" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" attributes="0">
+                                              <Component id="radio_trombosissi7" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="radio_trombosisno7" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="radio_trombosisnsnc7" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" attributes="0">
+                                              <Component id="radio_trombosissi6" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="radio_trombosisno6" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="radio_trombosisnsnc6" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" attributes="0">
+                                              <Component id="radio_trombosissi5" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="radio_trombosisno5" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="radio_trombosisnsnc5" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" attributes="0">
+                                              <Component id="radio_trombosissi4" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="radio_trombosisno4" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="radio_trombosisnsnc4" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" attributes="0">
+                                              <Component id="radio_trombosissi3" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="radio_trombosisno3" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="radio_trombosisnsnc3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" attributes="0">
+                                              <Component id="radio_trombosissi2" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="radio_trombosisno2" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="radio_trombosisnsnc2" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" attributes="0">
+                                              <Component id="radio_trombosissi1" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="radio_trombosisno1" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="radio_trombosisnsnc1" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                                  <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="label_redcargada" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
+              <EmptySpace pref="35" max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
+              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+              <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="check_oxigenobajo" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="check_trombosis" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="check_cianosis" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="check_tosesputo" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="check_taquicardia" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="check_fiebre" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="check_tossangre" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="check_dolortoracico" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="check_tosseca" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="check_disnea" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="check_perdidapeso" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="check_sudoraciones" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="check_broncoespasmo" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="check_faltaapetito" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
                       <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="label_obesidad" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="radio_obesidadno" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="radio_obesidadsi" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="radio_obesidadnsnc" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="label_embarazo" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="radio_embarazosi" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="radio_embarazono" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="radio_embarazonsnc" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_antecedentesasma" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_antecedentesasmasi" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_antecedentesasmano" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_antecedentesasmansnc" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -243,6 +407,13 @@
                           <Component id="radio_antecedentescancersi" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="radio_antecedentescancerno" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="radio_antecedentescancernsnc" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_antecedentesepoc" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_antecedentesepocsi" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_antecedentesepocno" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_antecedentesepocnsnc" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -260,6 +431,41 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_contactotuberculosis" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_contactotuberculosissi" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_contactotuberculosisno" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_contactotuberculosisnsnc" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_embarazo" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_embarazosi" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_embarazono" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_embarazonsnc" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_exposicionalergenos" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_exposicionalergenossi" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_exposicionalergenosno" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_exposicionalergenosnsnc" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_fumador" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_fumadorsi" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_fumadorno" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_fumadornsnc" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="radio_obesidadsi" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_obesidadno" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_obesidadnsnc" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_obesidad" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="label_gripe" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="radio_gripesi" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="radio_gripeno" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -272,48 +478,167 @@
                           <Component id="radio_viajeasiano" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="radio_viajeasiansnc" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="label_contactotuberculosis" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="radio_contactotuberculosissi" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="radio_contactotuberculosisno" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="radio_contactotuberculosisnsnc" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="label_fumador" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="radio_fumadorsi" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="radio_fumadorno" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="radio_fumadornsnc" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_broncoespasmo" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_broncoespasmosi" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_broncoespasmono" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_broncoespasmonsnc" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_trombosissi4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_trombosisno4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_trombosisnsnc4" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="label_antecedentesasma" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="radio_antecedentesasmasi" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="radio_antecedentesasmano" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="radio_antecedentesasmansnc" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_cianosis" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_cianosissi" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_cianosisno" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_cianosisnsnc" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_trombosissi3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_trombosisno3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_trombosisnsnc3" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="label_exposicionalergenos" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="radio_exposicionalergenossi" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="radio_exposicionalergenosno" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="radio_exposicionalergenosnsnc" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_disnea" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_disneasi" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_disneano" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_disneansnc" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_trombosissi2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_trombosisno2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_trombosisnsnc2" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="label_antecedentesepoc" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Group type="103" alignment="3" groupAlignment="3" attributes="0">
-                              <Component id="radio_antecedentesepocsi" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="radio_antecedentesepocno" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="radio_antecedentesepocnsnc" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_dolortoracico" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_dolortoracicosi" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_dolortoracicono" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_dolortoraciconsnc" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_trombosissi1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_trombosisno1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_trombosisnsnc1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_faltaapetito" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_faltaapetitosi" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_faltaapetitono" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_faltaapetitonsnc" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_trombosissi5" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_trombosisno5" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_trombosisnsnc5" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_fiebre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_fiebresi" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_fiebreno" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_fiebrensnc" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_trombosissi6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_trombosisno6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_trombosisnsnc6" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_insuficienciarenal" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_insuficienciarenalsi" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_insuficienciarenalno" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_insuficienciarenalnsnc" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_trombosissi7" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_trombosisno7" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_trombosisnsnc7" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_oxigenosangre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_oxigenosangresi" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_oxigenosangreno" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_oxigenosangrensnc" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_trombosissi8" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_trombosisno8" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_trombosisnsnc8" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_perdidapeso" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_perdidapesosi" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_perdidapesono" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_perdidapesonsnc" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_sudoraciones" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_sudoracionessi" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_sudoracionesno" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_sudoracionesnsnc" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="label_taquicardia" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="radio_taquicardiasi" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="radio_taquicardiano" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="radio_taquicardiansnc" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="label_tosesputo" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="radio_tosesputosi" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="radio_tosesputono" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="radio_tosesputonsnc" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="label_tossangre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="radio_tossangresi" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="radio_tossangreno" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="radio_tossangrensnc" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel14" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                              <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="radio_tossecasi" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_tossecano" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_tossecansnc" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_tosseca" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="radio_trombosissi" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_trombosisno" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio_trombosisnsnc" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_trombosis" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel16" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
+              <EmptySpace pref="6" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="label_redcargada" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="check_insuficienciarenal" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="25" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -324,7 +649,7 @@
         <Property name="text" type="java.lang.String" value="Cargar otra red"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="label_redcargada">
       <Properties>
         <Property name="text" type="java.lang.String" value="Red cargada por defeto"/>
       </Properties>
@@ -339,85 +664,10 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Enfermedad mas posible"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="check_oxigenobajo">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Ox&#xed;geno bajo en sangre"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="check_trombosis">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Trombosis"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="check_cianosis">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Cianosis"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="check_tosesputo">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Tos con esputo"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="check_taquicardia">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Taquicardia"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="check_fiebre">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Fiebre"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="check_tossangre">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Tos con sangre"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="check_dolortoracico">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Dolor tor&#xe1;cico"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="check_tosseca">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Tos seca"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_tossecaActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="check_disnea">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Disnea"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="check_perdidapeso">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="P&#xe9;rdida de peso"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="check_sudoraciones">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Sudoraciones"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="check_broncoespasmo">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Broncoesmpasmo"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="check_faltaapetito">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Falta de apetito"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="check_insuficienciarenal">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Insuficiencia renal"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="18" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="S&#xed;ntomas"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JRadioButton" name="radio_obesidadsi">
@@ -425,6 +675,7 @@
         <Property name="text" type="java.lang.String" value="S&#xed;"/>
       </Properties>
       <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_obesidadsiMouseClicked"/>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radio_obesidadsiActionPerformed"/>
       </Events>
     </Component>
@@ -432,6 +683,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="No"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_obesidadnoMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="label_obesidad">
       <Properties>
@@ -442,6 +696,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="NS/NC"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_obesidadnsncMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="label_embarazo">
       <Properties>
@@ -453,6 +710,7 @@
         <Property name="text" type="java.lang.String" value="S&#xed;"/>
       </Properties>
       <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_embarazosiMouseClicked"/>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radio_embarazosiActionPerformed"/>
       </Events>
     </Component>
@@ -460,15 +718,21 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="No"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_embarazonoMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JRadioButton" name="radio_embarazonsnc">
       <Properties>
         <Property name="text" type="java.lang.String" value="NS/NC"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_embarazonsncMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="label_antecedentescancer">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Antecedentes C&#xe1;ncer"/>
+        <Property name="text" type="java.lang.String" value="Antecedentes de c&#xe1;ncer"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JRadioButton" name="radio_antecedentescancersi">
@@ -476,6 +740,7 @@
         <Property name="text" type="java.lang.String" value="S&#xed;"/>
       </Properties>
       <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_antecedentescancersiMouseClicked"/>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radio_antecedentescancersiActionPerformed"/>
       </Events>
     </Component>
@@ -483,11 +748,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="No"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_antecedentescancernoMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JRadioButton" name="radio_antecedentescancernsnc">
       <Properties>
         <Property name="text" type="java.lang.String" value="NS/NC"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_antecedentescancernsncMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="label_contaminantesquimicos">
       <Properties>
@@ -499,6 +770,7 @@
         <Property name="text" type="java.lang.String" value="S&#xed;"/>
       </Properties>
       <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_contaminantesquimicossiMouseClicked"/>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radio_contaminantesquimicossiActionPerformed"/>
       </Events>
     </Component>
@@ -506,11 +778,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="No"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_contaminantesquimicosnoMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JRadioButton" name="radio_contaminantesquimicosnsnc">
       <Properties>
         <Property name="text" type="java.lang.String" value="NS/NC"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_contaminantesquimicosnsncMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="label_contactoneumonia">
       <Properties>
@@ -522,6 +800,7 @@
         <Property name="text" type="java.lang.String" value="S&#xed;"/>
       </Properties>
       <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_contactoneumoniasiMouseClicked"/>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radio_contactoneumoniasiActionPerformed"/>
       </Events>
     </Component>
@@ -529,11 +808,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="No"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_contactoneumonianoMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JRadioButton" name="radio_contactoneumoniansnc">
       <Properties>
         <Property name="text" type="java.lang.String" value="NS/NC"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_contactoneumoniansncMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="label_gripe">
       <Properties>
@@ -567,7 +852,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="label_antecedentesepoc">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Antecedentes EPOC"/>
+        <Property name="text" type="java.lang.String" value="Antecedentes de EPOC"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JRadioButton" name="radio_gripesi">
@@ -575,6 +860,7 @@
         <Property name="text" type="java.lang.String" value="S&#xed;"/>
       </Properties>
       <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_gripesiMouseClicked"/>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radio_gripesiActionPerformed"/>
       </Events>
     </Component>
@@ -582,17 +868,24 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="No"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_gripenoMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JRadioButton" name="radio_gripensnc">
       <Properties>
         <Property name="text" type="java.lang.String" value="NS/NC"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_gripensncMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JRadioButton" name="radio_viajeasiasi">
       <Properties>
         <Property name="text" type="java.lang.String" value="S&#xed;"/>
       </Properties>
       <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_viajeasiasiMouseClicked"/>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radio_viajeasiasiActionPerformed"/>
       </Events>
     </Component>
@@ -600,17 +893,24 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="No"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_viajeasianoMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JRadioButton" name="radio_viajeasiansnc">
       <Properties>
         <Property name="text" type="java.lang.String" value="NS/NC"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_viajeasiansncMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JRadioButton" name="radio_contactotuberculosissi">
       <Properties>
         <Property name="text" type="java.lang.String" value="S&#xed;"/>
       </Properties>
       <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_contactotuberculosissiMouseClicked"/>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radio_contactotuberculosissiActionPerformed"/>
       </Events>
     </Component>
@@ -618,17 +918,24 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="No"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_contactotuberculosisnoMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JRadioButton" name="radio_contactotuberculosisnsnc">
       <Properties>
         <Property name="text" type="java.lang.String" value="NS/NC"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_contactotuberculosisnsncMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JRadioButton" name="radio_fumadorsi">
       <Properties>
         <Property name="text" type="java.lang.String" value="S&#xed;"/>
       </Properties>
       <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_fumadorsiMouseClicked"/>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radio_fumadorsiActionPerformed"/>
       </Events>
     </Component>
@@ -636,17 +943,24 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="No"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_fumadornoMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JRadioButton" name="radio_fumadornsnc">
       <Properties>
         <Property name="text" type="java.lang.String" value="NS/NC"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_fumadornsncMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JRadioButton" name="radio_exposicionalergenossi">
       <Properties>
         <Property name="text" type="java.lang.String" value="S&#xed;"/>
       </Properties>
       <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_exposicionalergenossiMouseClicked"/>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radio_exposicionalergenossiActionPerformed"/>
       </Events>
     </Component>
@@ -654,17 +968,24 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="No"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_exposicionalergenosnoMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JRadioButton" name="radio_exposicionalergenosnsnc">
       <Properties>
         <Property name="text" type="java.lang.String" value="NS/NC"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_exposicionalergenosnsncMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JRadioButton" name="radio_antecedentesepocsi">
       <Properties>
         <Property name="text" type="java.lang.String" value="S&#xed;"/>
       </Properties>
       <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_antecedentesepocsiMouseClicked"/>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radio_antecedentesepocsiActionPerformed"/>
       </Events>
     </Component>
@@ -672,17 +993,24 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="No"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_antecedentesepocnoMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JRadioButton" name="radio_antecedentesepocnsnc">
       <Properties>
         <Property name="text" type="java.lang.String" value="NS/NC"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_antecedentesepocnsncMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JRadioButton" name="radio_antecedentesasmasi">
       <Properties>
         <Property name="text" type="java.lang.String" value="S&#xed;"/>
       </Properties>
       <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_antecedentesasmasiMouseClicked"/>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radio_antecedentesasmasiActionPerformed"/>
       </Events>
     </Component>
@@ -690,10 +1018,745 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="No"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_antecedentesasmanoMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JRadioButton" name="radio_antecedentesasmansnc">
       <Properties>
         <Property name="text" type="java.lang.String" value="NS/NC"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_antecedentesasmansncMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="label_oxigenosangre">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Ox&#xed;geno en sangre"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="label_trombosis">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Trombosis"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="label_cianosis">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Cianosis"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="label_tosesputo">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Tos con esputo"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="label_taquicardia">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Taquicardia"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="label_fiebre">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Fiebre"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="label_tossangre">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Tos con sangre"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="label_dolortoracico">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Dolor tor&#xe1;cico"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="label_tosseca">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Tos seca"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="label_disnea">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Disnea"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="label_perdidapeso">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="P&#xe9;rdida de peso"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="label_sudoraciones">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Sudoraciones"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="label_broncoespasmo">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Broncoespasmo"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="label_faltaapetito">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Falta de apetito"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="label_insuficienciarenal">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Insuficiencia renal"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_oxigenosangresi">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="S&#xed;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_oxigenosangresiMouseClicked"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radio_oxigenosangresiActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_oxigenosangreno">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="No"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_oxigenosangrenoMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_oxigenosangrensnc">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="NS/NC"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_oxigenosangrensncMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_insuficienciarenalsi">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="S&#xed;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_insuficienciarenalsiMouseClicked"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radio_insuficienciarenalsiActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_insuficienciarenalno">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="No"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_insuficienciarenalnoMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_insuficienciarenalnsnc">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="NS/NC"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_insuficienciarenalnsncMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_fiebresi">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="S&#xed;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_fiebresiMouseClicked"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radio_fiebresiActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_fiebreno">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="No"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_fiebrenoMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_fiebrensnc">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="NS/NC"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_fiebrensncMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_faltaapetitosi">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="S&#xed;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_faltaapetitosiMouseClicked"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radio_faltaapetitosiActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_faltaapetitono">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="No"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_faltaapetitonoMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_faltaapetitonsnc">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="NS/NC"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_faltaapetitonsncMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_dolortoracicosi">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="S&#xed;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_dolortoracicosiMouseClicked"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radio_dolortoracicosiActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_dolortoracicono">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="No"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_dolortoraciconoMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_dolortoraciconsnc">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="NS/NC"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_dolortoraciconsncMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_disneasi">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="S&#xed;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_disneasiMouseClicked"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radio_disneasiActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_disneano">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="No"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_disneanoMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_disneansnc">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="NS/NC"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_disneansncMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_cianosissi">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="S&#xed;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_cianosissiMouseClicked"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radio_cianosissiActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_cianosisno">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="No"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_cianosisnoMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_cianosisnsnc">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="NS/NC"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_cianosisnsncMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_broncoespasmosi">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="S&#xed;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_broncoespasmosiMouseClicked"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radio_broncoespasmosiActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_broncoespasmono">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="No"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_broncoespasmonoMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_broncoespasmonsnc">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="NS/NC"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_broncoespasmonsncMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_perdidapesosi">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="S&#xed;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_perdidapesosiMouseClicked"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radio_perdidapesosiActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_perdidapesono">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="No"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_perdidapesonoMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_perdidapesonsnc">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="NS/NC"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_perdidapesonsncMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_sudoracionessi">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="S&#xed;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_sudoracionessiMouseClicked"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radio_sudoracionessiActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_sudoracionesno">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="No"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_sudoracionesnoMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_sudoracionesnsnc">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="NS/NC"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_sudoracionesnsncMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_taquicardiasi">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="S&#xed;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_taquicardiasiMouseClicked"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radio_taquicardiasiActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_taquicardiano">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="No"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_taquicardianoMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_taquicardiansnc">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="NS/NC"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_taquicardiansncMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_tosesputosi">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="S&#xed;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_tosesputosiMouseClicked"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radio_tosesputosiActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_tosesputono">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="No"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_tosesputonoMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_tosesputonsnc">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="NS/NC"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_tosesputonsncMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_tossangresi">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="S&#xed;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_tossangresiMouseClicked"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radio_tossangresiActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_tossangreno">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="No"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_tossangrenoMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_tossangrensnc">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="NS/NC"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_tossangrensncMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_tossecasi">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="S&#xed;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_tossecasiMouseClicked"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radio_tossecasiActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_tossecano">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="No"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_tossecanoMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_tossecansnc">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="NS/NC"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_tossecansncMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_trombosissi">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="S&#xed;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_trombosissiMouseClicked"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radio_trombosissiActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_trombosisno">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="No"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_trombosisnoMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_trombosisnsnc">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="NS/NC"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_trombosisnsncMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel5">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="18" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Diagn&#xf3;stico"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Asma"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel6">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="C&#xe1;ncer"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel7">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Derrame Pleural"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel8">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Enfermedad Rara"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel9">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="EPOC"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel10">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Neumon&#xed;a"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel11">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Trombosis"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel12">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Tuberculosis"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_trombosissi1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="S&#xed;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_trombosissi1MouseClicked"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radio_trombosissi1ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_trombosisno1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="No"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_trombosisno1MouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_trombosisnsnc1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="NS/NC"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_trombosisnsnc1MouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_trombosissi2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="S&#xed;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_trombosissi2MouseClicked"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radio_trombosissi2ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_trombosisno2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="No"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_trombosisno2MouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_trombosisnsnc2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="NS/NC"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_trombosisnsnc2MouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_trombosissi3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="S&#xed;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_trombosissi3MouseClicked"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radio_trombosissi3ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_trombosisno3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="No"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_trombosisno3MouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_trombosisnsnc3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="NS/NC"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_trombosisnsnc3MouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_trombosissi4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="S&#xed;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_trombosissi4MouseClicked"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radio_trombosissi4ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_trombosisno4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="No"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_trombosisno4MouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_trombosisnsnc4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="NS/NC"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_trombosisnsnc4MouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_trombosissi5">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="S&#xed;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_trombosissi5MouseClicked"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radio_trombosissi5ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_trombosisno5">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="No"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_trombosisno5MouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_trombosisnsnc5">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="NS/NC"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_trombosisnsnc5MouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_trombosissi6">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="S&#xed;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_trombosissi6MouseClicked"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radio_trombosissi6ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_trombosisno6">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="No"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_trombosisno6MouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_trombosisnsnc6">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="NS/NC"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_trombosisnsnc6MouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_trombosissi7">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="S&#xed;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_trombosissi7MouseClicked"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radio_trombosissi7ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_trombosisno7">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="No"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_trombosisno7MouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_trombosisnsnc7">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="NS/NC"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_trombosisnsnc7MouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_trombosissi8">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="S&#xed;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_trombosissi8MouseClicked"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radio_trombosissi8ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_trombosisno8">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="No"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_trombosisno8MouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="radio_trombosisnsnc8">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="NS/NC"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="radio_trombosisnsnc8MouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel13">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="18" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Padece alguna enfermedad pulmonar"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel14">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Diagnostico 1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel15">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Diagnostico 2"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel16">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Diagnostico 3"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel17">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="24" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Diagn&#xf3;sis de Enfermedades Pulmonares"/>
       </Properties>
     </Component>
   </SubComponents>
