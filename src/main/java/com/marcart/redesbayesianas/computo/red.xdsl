@@ -2,226 +2,226 @@
 <smile version="1.0" id="Network1" numsamples="1000" discsamples="10000">
 	<nodes>
 		<cpt id="Fumador">
-			<state id="State0" />
-			<state id="State1" />
-			<probabilities>0.5 0.5</probabilities>
+			<state id="si" />
+			<state id="no" />
+			<probabilities>0.23 0.77</probabilities>
 		</cpt>
 		<cpt id="ExposicionAlergenos">
-			<state id="State0" />
-			<state id="State1" />
-			<probabilities>0.5 0.5</probabilities>
+			<state id="si" />
+			<state id="no" />
+			<probabilities>0.46 0.54</probabilities>
 		</cpt>
 		<cpt id="AntecedentesAsma">
-			<state id="State0" />
-			<state id="State1" />
-			<probabilities>0.5 0.5</probabilities>
+			<state id="si" />
+			<state id="no" />
+			<probabilities>0.15 0.85</probabilities>
 		</cpt>
 		<cpt id="Alergenos_Antecedentes">
-			<state id="State0" />
-			<state id="State1" />
+			<state id="si" />
+			<state id="no" />
 			<parents>ExposicionAlergenos AntecedentesAsma</parents>
-			<probabilities>0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+			<probabilities>1 0 1 0 1 0 0 1</probabilities>
 		</cpt>
 		<cpt id="Asma">
-			<state id="State0" />
-			<state id="State1" />
+			<state id="si" />
+			<state id="no" />
 			<parents>Fumador Alergenos_Antecedentes</parents>
-			<probabilities>0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+			<probabilities>0.23394 0.76606 0.16 0.84 0.18856 0.8114400000000001 0.01 0.99</probabilities>
 		</cpt>
-		<cpt id="ContactoNeumonia">
-			<state id="State0" />
-			<state id="State1" />
-			<probabilities>0.5 0.5</probabilities>
+		<cpt id="AvanzadaEdad">
+			<state id="si" />
+			<state id="no" />
+			<probabilities>0.08266999999999999 0.91733</probabilities>
 		</cpt>
 		<cpt id="Gripe">
-			<state id="State0" />
-			<state id="State1" />
-			<probabilities>0.5 0.5</probabilities>
+			<state id="si" />
+			<state id="no" />
+			<probabilities>0.075 0.925</probabilities>
 		</cpt>
 		<cpt id="Neumonia">
-			<state id="State0" />
-			<state id="State1" />
-			<parents>Fumador Gripe ContactoNeumonia</parents>
-			<probabilities>0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
-		</cpt>
-		<cpt id="Viaje_Asia_Africa">
-			<state id="State0" />
-			<state id="State1" />
-			<probabilities>0.5 0.5</probabilities>
+			<state id="si" />
+			<state id="no" />
+			<parents>Fumador Gripe AvanzadaEdad</parents>
+			<probabilities>0.45 0.55 0.29 0.71 0.27 0.73 0.23 0.77 0.04 0.96 0.02 0.98 0.032 0.968 0.001 0.999</probabilities>
 		</cpt>
 		<cpt id="ContactoTuberculosis">
-			<state id="State0" />
-			<state id="State1" />
-			<parents>Viaje_Asia_Africa</parents>
-			<probabilities>0.5 0.5 0.5 0.5</probabilities>
+			<state id="si" />
+			<state id="no" />
+			<probabilities>0.00123 0.99877</probabilities>
 		</cpt>
 		<cpt id="Tuberculosis">
-			<state id="State0" />
-			<state id="State1" />
+			<state id="si" />
+			<state id="no" />
 			<parents>Fumador ContactoTuberculosis</parents>
-			<probabilities>0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+			<probabilities>0.16696 0.83304 0.00226 0.99774 0.08 0.92 0.0001 0.9999</probabilities>
 		</cpt>
 		<cpt id="EnfermedadesRaras">
-			<state id="State0" />
-			<state id="State1" />
-			<probabilities>0.5 0.5</probabilities>
+			<state id="si" />
+			<state id="no" />
+			<probabilities>0.001 0.999</probabilities>
 		</cpt>
 		<cpt id="Fiebre">
-			<state id="State0" />
-			<state id="State1" />
+			<state id="si" />
+			<state id="no" />
 			<parents>Neumonia Tuberculosis EnfermedadesRaras</parents>
-			<probabilities>0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+			<probabilities>0.9999 0.0001 0.94995 0.05005 0.89988 0.10012 0.84985 0.15015 0.74874 0.25126 0.64839 0.35161 0.49769 0.50231 0.1153 0.8847</probabilities>
 		</cpt>
 		<cpt id="AntecedentesEPOC">
-			<state id="State0" />
-			<state id="State1" />
-			<probabilities>0.5 0.5</probabilities>
+			<state id="si" />
+			<state id="no" />
+			<probabilities>0.091 0.909</probabilities>
 		</cpt>
 		<cpt id="Alergenos_AntecedentesEPOC">
-			<state id="State0" />
-			<state id="State1" />
+			<state id="si" />
+			<state id="no" />
 			<parents>ExposicionAlergenos AntecedentesEPOC</parents>
-			<probabilities>0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+			<probabilities>1 0 1 0 1 0 0 1</probabilities>
 		</cpt>
 		<cpt id="EPOC">
-			<state id="State0" />
-			<state id="State1" />
+			<state id="si" />
+			<state id="no" />
 			<parents>Fumador Asma Alergenos_AntecedentesEPOC</parents>
-			<probabilities>0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+			<probabilities>0.3 0.7 0.17183 0.82817 0.197 0.803 0.093 0.907 0.131 0.869 0.041 0.959 0.081 0.919 0.02 0.98</probabilities>
 		</cpt>
 		<cpt id="Neumonia_Tuberculosis">
-			<state id="State0" />
-			<state id="State1" />
+			<state id="si" />
+			<state id="no" />
 			<parents>Neumonia Tuberculosis</parents>
-			<probabilities>0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+			<probabilities>1 0 1 0 1 0 0 1</probabilities>
 		</cpt>
 		<cpt id="ContaminantesQu_micos">
-			<state id="State0" />
-			<state id="State1" />
-			<probabilities>0.5 0.5</probabilities>
+			<state id="si" />
+			<state id="nno" />
+			<probabilities>0.23 0.77</probabilities>
 		</cpt>
 		<cpt id="AntecedentesCancer">
-			<state id="State0" />
-			<state id="State1" />
-			<probabilities>0.5 0.5</probabilities>
+			<state id="si" />
+			<state id="no" />
+			<probabilities>0.066 0.9340000000000001</probabilities>
 		</cpt>
 		<cpt id="Quimicos_Antecedentes">
-			<state id="State0" />
-			<state id="State1" />
+			<state id="si" />
+			<state id="no" />
 			<parents>ContaminantesQu_micos AntecedentesCancer</parents>
-			<probabilities>0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+			<probabilities>1 0 1 0 1 0 0 1</probabilities>
 		</cpt>
 		<cpt id="Cancer">
-			<state id="State0" />
-			<state id="State1" />
+			<state id="si" />
+			<state id="no" />
 			<parents>Fumador Neumonia_Tuberculosis Quimicos_Antecedentes</parents>
-			<probabilities>0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+			<probabilities>0.88929 0.11071 0.62886 0.37114 0.09004 0.90996 0.1317 0.8683 0.43221 0.56779 0.48 0.52 0.0001 0.9999 0.0001 0.9999</probabilities>
 		</cpt>
 		<cpt id="DerramePleural">
-			<state id="State0" />
-			<state id="State1" />
+			<state id="si" />
+			<state id="no" />
 			<parents>Cancer Neumonia_Tuberculosis</parents>
-			<probabilities>0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+			<probabilities>0.53486 0.46514 0.008999999999999999 0.991 0.05007 0.9499300000000001 1e-005 0.99999</probabilities>
 		</cpt>
 		<cpt id="TosSeca">
-			<state id="State0" />
-			<state id="State1" />
+			<state id="si" />
+			<state id="no" />
 			<parents>Asma DerramePleural</parents>
-			<probabilities>0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+			<probabilities>0.999 0.001 0.98997 0.01003 0.7647 0.2353 0.4124 0.5876</probabilities>
 		</cpt>
 		<cpt id="Obesidad">
-			<state id="State0" />
-			<state id="State1" />
-			<probabilities>0.5 0.5</probabilities>
+			<state id="si" />
+			<state id="no" />
+			<probabilities>0.216 0.784</probabilities>
+		</cpt>
+		<cpt id="Mujer">
+			<state id="si" />
+			<state id="no" />
+			<probabilities>0.50451 0.49549</probabilities>
 		</cpt>
 		<cpt id="Embarazo">
-			<state id="State0" />
-			<state id="State1" />
-			<probabilities>0.5 0.5</probabilities>
+			<state id="si" />
+			<state id="no" />
+			<parents>Mujer</parents>
+			<probabilities>0.00899 0.9910099999999999 0 1</probabilities>
 		</cpt>
 		<cpt id="Tromboembolia">
-			<state id="State0" />
-			<state id="State1" />
-			<parents>Obesidad Embarazo Cancer</parents>
-			<probabilities>0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+			<state id="si" />
+			<state id="no" />
+			<parents>Obesidad Embarazo</parents>
+			<probabilities>0.00514 0.99486 0.00289 0.9971100000000001 0.00078 0.99922 0.0005 0.9995000000000001</probabilities>
 		</cpt>
 		<cpt id="Cianosis">
-			<state id="State0" />
-			<state id="State1" />
+			<state id="si" />
+			<state id="no" />
 			<parents>Tromboembolia</parents>
-			<probabilities>0.5 0.5 0.5 0.5</probabilities>
+			<probabilities>0.445 0.555 0.01 0.99</probabilities>
 		</cpt>
 		<cpt id="DolorToracico">
-			<state id="State0" />
-			<state id="State1" />
+			<state id="si" />
+			<state id="no" />
 			<parents>Neumonia DerramePleural Tromboembolia Tuberculosis Cancer EnfermedadesRaras</parents>
-			<probabilities>0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+			<probabilities>1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 0 1</probabilities>
 		</cpt>
 		<cpt id="Broncoespasmo">
-			<state id="State0" />
-			<state id="State1" />
+			<state id="si" />
+			<state id="no" />
 			<parents>Asma</parents>
-			<probabilities>0.5 0.5 0.5 0.5</probabilities>
+			<probabilities>0.95 0.05 0.01 0.99</probabilities>
 		</cpt>
 		<cpt id="TosConSangre">
-			<state id="State0" />
-			<state id="State1" />
+			<state id="si" />
+			<state id="no" />
 			<parents>Tromboembolia Cancer Tuberculosis</parents>
-			<probabilities>0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+			<probabilities>0.9999 0.0001 0.4142 0.5858 0.6842 0.3158 0.2004 0.7996 0.6842 0.3158 0.1992 0.8008 0.4756 0.5244 0.0065 0.9935</probabilities>
 		</cpt>
 		<cpt id="PerdidaPeso">
-			<state id="State0" />
-			<state id="State1" />
+			<state id="si" />
+			<state id="no" />
 			<parents>Cancer Tuberculosis EPOC</parents>
-			<probabilities>0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+			<probabilities>0.9999 0.0001 0.6766799999999999 0.32332 0.89988 0.10012 0.39916 0.60084 0.76125 0.23875 0.24821 0.75179 0.47135 0.52865 0.02456 0.97544</probabilities>
 		</cpt>
 		<cpt id="TosConEsputo">
-			<state id="State0" />
-			<state id="State1" />
+			<state id="si" />
+			<state id="no" />
 			<parents>Neumonia Tuberculosis EPOC</parents>
-			<probabilities>0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+			<probabilities>0.97162 0.02838 0.9716 0.0284 0.8284899999999999 0.17151 0.79692 0.20308 0.95103 0.04897 0.94286 0.05714 0.8097299999999999 0.19027 0.008 0.992</probabilities>
 		</cpt>
 		<cpt id="Sudoraciones">
-			<state id="State0" />
-			<state id="State1" />
+			<state id="si" />
+			<state id="no" />
 			<parents>Tuberculosis</parents>
-			<probabilities>0.5 0.5 0.5 0.5</probabilities>
+			<probabilities>0.75 0.25 0.15 0.85</probabilities>
 		</cpt>
 		<cpt id="OxigenoBajoSangre">
-			<state id="State0" />
-			<state id="State1" />
+			<state id="si" />
+			<state id="no" />
 			<parents>Tromboembolia</parents>
-			<probabilities>0.5 0.5 0.5 0.5</probabilities>
+			<probabilities>0.99 0.01 0.1 0.9</probabilities>
 		</cpt>
-		<cpt id="Tarquicardia">
-			<state id="State0" />
-			<state id="State1" />
+		<cpt id="Taquicardia">
+			<state id="si" />
+			<state id="no" />
 			<parents>Tromboembolia EnfermedadesRaras</parents>
-			<probabilities>0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+			<probabilities>0.999 0.001 0.68769 0.31231 0.4995 0.5004999999999999 0.0016 0.9984</probabilities>
 		</cpt>
 		<cpt id="Disnea">
-			<state id="State0" />
-			<state id="State1" />
+			<state id="si" />
+			<state id="no" />
 			<parents>Tromboembolia Asma Neumonia Cancer Tuberculosis DerramePleural EPOC EnfermedadesRaras</parents>
-			<probabilities>0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+			<probabilities>1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 0 1</probabilities>
 		</cpt>
 		<cpt id="Trombosis">
-			<state id="State0" />
-			<state id="State1" />
+			<state id="si" />
+			<state id="no" />
 			<parents>Tromboembolia</parents>
-			<probabilities>0.5 0.5 0.5 0.5</probabilities>
-		</cpt>
-		<cpt id="FaltaApetito">
-			<state id="State0" />
-			<state id="State1" />
-			<parents>EnfermedadesRaras</parents>
-			<probabilities>0.5 0.5 0.5 0.5</probabilities>
+			<probabilities>0.9 0.1 0.2 0.8</probabilities>
 		</cpt>
 		<cpt id="InsuficienciaRenal">
-			<state id="State0" />
-			<state id="State1" />
+			<state id="si" />
+			<state id="no" />
 			<parents>EnfermedadesRaras</parents>
-			<probabilities>0.5 0.5 0.5 0.5</probabilities>
+			<probabilities>0.125 0.875 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="FaltaApetito">
+			<state id="si" />
+			<state id="no" />
+			<parents>EnfermedadesRaras</parents>
+			<probabilities>0.5 0.5 0.04955 0.95045</probabilities>
 		</cpt>
 	</nodes>
 	<extensions>
@@ -231,273 +231,273 @@
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>225 270 282 308</position>
+				<position>849 653 937 717</position>
 			</node>
 			<node id="Fumador">
 				<name>Fumador</name>
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>651 171 716 210</position>
+				<position>876 201 966 266</position>
 			</node>
 			<node id="Neumonia">
 				<name>Neumonia</name>
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>355 348 417 387</position>
+				<position>549 505 635 561</position>
 			</node>
 			<node id="Fiebre">
 				<name>Fiebre</name>
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>649 681 695 709</position>
+				<position>770 951 841 994</position>
 			</node>
 			<node id="TosSeca">
 				<name>TosSeca</name>
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>429 679 499 716</position>
+				<position>965 957 1044 994</position>
 			</node>
 			<node id="DolorToracico">
 				<name>DolorToracico</name>
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>750 658 841 705</position>
+				<position>854 949 953 1000</position>
 			</node>
 			<node id="ExposicionAlergenos">
 				<name>ExposicionAlergenos</name>
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>820 18 936 64</position>
+				<position>1053 383 1169 429</position>
 			</node>
 			<node id="Broncoespasmo">
 				<name>Broncoespasmo</name>
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>253 596 353 652</position>
+				<position>1237 957 1337 1013</position>
 			</node>
 			<node id="Cancer">
 				<name>Cancer</name>
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>534 418 583 448</position>
+				<position>525 709 616 761</position>
 			</node>
 			<node id="PerdidaPeso">
 				<name>PerdidaPeso</name>
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>907 636 979 681</position>
+				<position>1055 954 1127 999</position>
 			</node>
 			<node id="DerramePleural">
 				<name>DerramePleural</name>
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>857 400 962 451</position>
+				<position>716 719 838 774</position>
 			</node>
 			<node id="EnfermedadesRaras">
 				<name>EnfermedadesRaras</name>
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>1084 323 1204 369</position>
+				<position>1162 742 1282 788</position>
 			</node>
 			<node id="Tuberculosis">
 				<name>Tuberculosis</name>
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>719 322 792 367</position>
+				<position>703 534 813 585</position>
 			</node>
 			<node id="Sudoraciones">
 				<name>Sudoraciones</name>
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>1030 617 1123 665</position>
+				<position>1134 950 1227 998</position>
 			</node>
 			<node id="OxigenoBajoSangre">
 				<name>OxigenoBajoSangre</name>
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>69 450 178 510</position>
+				<position>35 892 144 952</position>
 			</node>
 			<node id="Tromboembolia">
 				<name>Tromboembolia</name>
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>126 338 209 389</position>
+				<position>278 638 377 683</position>
 			</node>
-			<node id="Tarquicardia">
-				<name>Tarquicardia</name>
+			<node id="Taquicardia">
+				<name>Taquicardia</name>
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>209 505 281 550</position>
+				<position>325 912 397 957</position>
 			</node>
 			<node id="EPOC">
 				<name>EPOC</name>
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>974 280 1019 308</position>
+				<position>994 700 1059 751</position>
 			</node>
 			<node id="AntecedentesAsma">
 				<name>AntecedentesAsma</name>
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>338 44 473 91</position>
+				<position>942 325 1089 373</position>
 			</node>
 			<node id="Cianosis">
 				<name>Cianosis</name>
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>179 610 235 645</position>
+				<position>254 906 320 946</position>
 			</node>
 			<node id="Obesidad">
 				<name>Obesidad</name>
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>95 138 156 176</position>
+				<position>154 500 234 549</position>
 			</node>
 			<node id="Embarazo">
 				<name>Embarazo</name>
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>177 134 239 172</position>
+				<position>304 545 380 587</position>
 			</node>
 			<node id="Gripe">
 				<name>Gripe</name>
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>360 226 405 254</position>
+				<position>445 384 516 431</position>
 			</node>
 			<node id="ContactoTuberculosis">
 				<name>ContactoTuberculosis</name>
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>749 150 883 204</position>
+				<position>585 176 719 230</position>
 			</node>
-			<node id="Viaje_Asia_Africa">
-				<name>Viaje Asia/Africa</name>
+			<node id="AvanzadaEdad">
+				<name>AvanzadaEdad</name>
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>772 65 865 123</position>
-			</node>
-			<node id="ContactoNeumonia">
-				<name>ContactoNeumonia</name>
-				<interior color="e5f6f7" />
-				<outline color="000080" />
-				<font color="000000" name="Arial" size="8" />
-				<position>557 122 658 185</position>
+				<position>505 277 606 340</position>
 			</node>
 			<node id="Disnea">
 				<name>Disnea</name>
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>534 657 588 704</position>
+				<position>666 949 740 1000</position>
 			</node>
 			<node id="Trombosis">
 				<name>Trombosis</name>
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>139 546 201 584</position>
+				<position>161 911 248 961</position>
 			</node>
 			<node id="Alergenos_Antecedentes">
 				<name>Alergenos_Antecedentes</name>
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>253 124 390 186</position>
+				<position>972 523 1109 585</position>
 			</node>
 			<node id="Neumonia_Tuberculosis">
 				<name>Neumonia_Tuberculosis</name>
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>496 292 631 375</position>
+				<position>395 588 530 671</position>
 			</node>
 			<node id="TosConSangre">
 				<name>TosConSangre</name>
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>378 615 469 658</position>
+				<position>558 943 649 986</position>
 			</node>
 			<node id="TosConEsputo">
 				<name>TosConEsputo</name>
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>322 658 404 709</position>
+				<position>424 923 522 975</position>
 			</node>
 			<node id="AntecedentesCancer">
 				<name>AntecedentesCancer</name>
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>593 8 705 78</position>
+				<position>778 329 890 399</position>
 			</node>
 			<node id="Quimicos_Antecedentes">
 				<name>Quimicos_Antecedentes</name>
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>416 162 548 231</position>
+				<position>659 419 791 488</position>
 			</node>
 			<node id="ContaminantesQu_micos">
 				<name>ContaminantesQuímicos</name>
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>494 18 589 64</position>
+				<position>686 294 781 340</position>
 			</node>
 			<node id="AntecedentesEPOC">
 				<name>AntecedentesEPOC</name>
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>1014 43 1136 108</position>
+				<position>1202 447 1324 512</position>
 			</node>
 			<node id="Alergenos_AntecedentesEPOC">
 				<name>Alergenos_AntecedentesEPOC</name>
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>894 150 1067 204</position>
-			</node>
-			<node id="FaltaApetito">
-				<name>FaltaApetito</name>
-				<interior color="e5f6f7" />
-				<outline color="000080" />
-				<font color="000000" name="Arial" size="8" />
-				<position>1181 535 1274 582</position>
+				<position>1079 589 1252 643</position>
 			</node>
 			<node id="InsuficienciaRenal">
 				<name>InsuficienciaRenal</name>
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>1135 600 1248 662</position>
+				<position>1347 960 1440 1007</position>
+			</node>
+			<node id="FaltaApetito">
+				<name>FaltaApetito</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1443 952 1556 1014</position>
+			</node>
+			<node id="Mujer">
+				<name>Mujer</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>275 432 364 491</position>
 			</node>
 		</genie>
 	</extensions>

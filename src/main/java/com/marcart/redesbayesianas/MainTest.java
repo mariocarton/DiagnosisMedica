@@ -26,7 +26,7 @@ public class MainTest {
      */
     public static void main(String[] args) {
        //Comentarop
-        String ub = "./src/main/java/com/marcart/redesbayesianas/red.xdsl";
+        String ub = "./src/main/java/com/marcart/redesbayesianas/computo/red.xdsl";
         LectorXDSL lector = new LectorXDSL();
         
         BayesNet net = lector.leeRed(ub);
