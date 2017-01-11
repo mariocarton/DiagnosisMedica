@@ -15,6 +15,7 @@ public class ControladorVistas {
 
     private static ControladorVistas controlador;
     private JFrame vista;
+    
 
     public static ControladorVistas getInstancia() {
         if (controlador == null) {
@@ -27,4 +28,6 @@ public class ControladorVistas {
         this.vista=new VistaPrincipal();
         this.vista.setVisible(true);
     }
+    
+   
 }

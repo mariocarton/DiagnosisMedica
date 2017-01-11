@@ -5,9 +5,14 @@
  */
 package com.marcart.redesbayesianas.interfaz;
 
+import java.io.File;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.HashMap;
 import javax.swing.ButtonGroup;
+import javax.swing.JFileChooser;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 /**
  *
@@ -234,22 +239,69 @@ public class VistaPrincipal extends javax.swing.JFrame {
     }
     
     public void publicaProbabilidades(ArrayList resultado){
+        int precision = 5;
         label_e1.setText((String)resultado.get(0));
-        label_p1.setText((String)resultado.get(1).toString());
+        double valor = round((double) resultado.get(1),precision);
+        label_p1.setText(Double.toString(valor));
         label_e2.setText((String)resultado.get(2));
-        label_p2.setText((String)resultado.get(3).toString());
+        valor = round((double) resultado.get(3),precision);
+        label_p2.setText(Double.toString(valor));        
         label_e3.setText((String)resultado.get(4));
-        label_p3.setText((String)resultado.get(5).toString());
+        valor = round((double) resultado.get(5),precision);
+        label_p3.setText(Double.toString(valor));
         label_e4.setText((String)resultado.get(6));
-        label_p4.setText((String)resultado.get(7).toString());
+        valor = round((double) resultado.get(7),precision);
+        label_p4.setText(Double.toString(valor));
         label_e5.setText((String)resultado.get(8));
-        label_p5.setText((String)resultado.get(9).toString());
+        valor = round((double) resultado.get(9),precision);
+        label_p5.setText(Double.toString(valor));
         label_e6.setText((String)resultado.get(10));
-        label_p6.setText((String)resultado.get(11).toString());
+        valor = round((double) resultado.get(11),precision);
+        label_p6.setText(Double.toString(valor));
         label_e7.setText((String)resultado.get(12));
-        label_p7.setText((String)resultado.get(13).toString());
+        valor = round((double) resultado.get(13),precision);
+        label_p7.setText(Double.toString(valor));
         label_e8.setText((String)resultado.get(14));
-        label_p8.setText((String)resultado.get(15).toString());
+        valor = round((double) resultado.get(15),precision);
+        label_p8.setText(Double.toString(valor));
+    }
+    
+    private void reseteaObservaciones(){       
+        radio_obesidadnsnc.setSelected(true);
+        radio_embarazonsnc.setSelected(true);        
+        radio_antecedentescancernsnc.setSelected(true);   
+        radio_contaminantesquimicosnsnc.setSelected(true);
+        radio_edadavanzadansnc.setSelected(true);    
+        radio_gripensnc.setSelected(true);        
+        radio_contactotuberculosisnsnc.setSelected(true);        
+        radio_fumadornsnc.setSelected(true);       
+        radio_mujernsnc.setSelected(true); 
+        radio_antecedentesasmansnc.setSelected(true);  
+        radio_exposicionalergenosnsnc.setSelected(true);       
+        radio_antecedentesepocnsnc.setSelected(true);       
+        radio_broncoespasmonsnc.setSelected(true);       
+        radio_cianosisnsnc.setSelected(true);       
+        radio_disneansnc.setSelected(true);       
+        radio_dolortoraciconsnc.setSelected(true);      
+        radio_faltaapetitonsnc.setSelected(true);       
+        radio_fiebrensnc.setSelected(true);       
+        radio_insuficienciarenalnsnc.setSelected(true);       
+        radio_oxigenosangrensnc.setSelected(true);       
+        radio_perdidapesonsnc.setSelected(true);       
+        radio_sudoracionesnsnc.setSelected(true);       
+        radio_taquicardiansnc.setSelected(true);       
+        radio_tosesputonsnc.setSelected(true);    
+        radio_tossangrensnc.setSelected(true);      
+        radio_tossecansnc.setSelected(true);             
+        radio_trombosisnsnc.setSelected(true);             
+        radio_trombosisnsnc.setSelected(true);                
+        radio_cancernsnc.setSelected(true);
+        radio_derramepleuralnsnc.setSelected(true);           
+        radio_ernsnc.setSelected(true);              
+        radio_epocnsnc.setSelected(true);         
+        radio_neumoniansnc.setSelected(true);                
+        radio_tepnsnc.setSelected(true);                
+        radio_tuberculosisnsnc.setSelected(true);
     }
 
     /**
@@ -262,7 +314,7 @@ public class VistaPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        boton_cargared = new javax.swing.JButton();
         label_redcargada = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -426,13 +478,19 @@ public class VistaPrincipal extends javax.swing.JFrame {
         label_p6 = new javax.swing.JLabel();
         label_p7 = new javax.swing.JLabel();
         label_p8 = new javax.swing.JLabel();
+        boton_reddefecto = new javax.swing.JButton();
 
         jLabel1.setText("jLabel1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Diagnosis de Enfermedades Pulmonares");
 
-        jButton1.setText("Cargar otra red");
+        boton_cargared.setText("Cargar otra red");
+        boton_cargared.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                boton_cargaredMouseClicked(evt);
+            }
+        });
 
         label_redcargada.setText("Red cargada por defeto");
 
@@ -1541,296 +1599,308 @@ public class VistaPrincipal extends javax.swing.JFrame {
                     .addComponent(label_p8)))
         );
 
+        boton_reddefecto.setText("Carga red por defecto");
+        boton_reddefecto.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                boton_reddefectoMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(32, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel17)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(label_antecedentesepoc)
-                            .addComponent(label_embarazo)
-                            .addComponent(jLabel2)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(label_contaminantesquimicos)
-                                    .addComponent(label_antecedentescancer)
-                                    .addComponent(label_antecedentesasma)
-                                    .addComponent(label_edadavanzada)
-                                    .addComponent(label_contactotuberculosis)
-                                    .addComponent(label_exposicionalergenos)
-                                    .addComponent(label_fumador)
-                                    .addComponent(label_obesidad))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(radio_fumadorsi)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(radio_fumadorno)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(radio_fumadornsnc))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(radio_exposicionalergenossi)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(radio_exposicionalergenosno)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(radio_exposicionalergenosnsnc))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(radio_contactotuberculosissi)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(radio_contactotuberculosisno)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(radio_contactotuberculosisnsnc))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(radio_edadavanzadasi)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(radio_edadavanzadano)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(radio_edadavanzadansnc))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(radio_antecedentesasmasi)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(radio_antecedentesasmano)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(radio_antecedentesasmansnc))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(radio_antecedentescancersi)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(radio_antecedentescancerno)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(radio_antecedentescancernsnc))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(radio_antecedentesepocsi)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(radio_antecedentesepocno)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(radio_antecedentesepocnsnc))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(radio_contaminantesquimicossi)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(radio_contaminantesquimicosno)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(radio_contaminantesquimicosnsnc))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(radio_embarazosi)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(radio_embarazono)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(radio_embarazonsnc))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(radio_obesidadsi)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(radio_obesidadno)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(radio_obesidadnsnc))))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(label_mujer)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(radio_mujersi)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(radio_mujerno)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(radio_mujernsnc))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(label_gripe)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(radio_gripesi)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(radio_gripeno)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(radio_gripensnc)))
-                        .addGap(32, 32, 32)
+                        .addGap(41, 41, 41)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(label_perdidapeso)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(label_cianosis)
-                                    .addComponent(label_broncoespasmo)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(label_oxigenosangre)
-                                                .addComponent(label_insuficienciarenal)
-                                                .addComponent(label_fiebre)
-                                                .addComponent(label_faltaapetito)
-                                                .addComponent(label_tossangre)
-                                                .addComponent(label_tosseca)
-                                                .addComponent(label_trombosis))
-                                            .addGap(18, 18, 18)
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addComponent(radio_faltaapetitosi)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(radio_faltaapetitono)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(radio_faltaapetitonsnc))
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addComponent(radio_fiebresi)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(radio_fiebreno)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(radio_fiebrensnc))
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addComponent(radio_insuficienciarenalsi)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(radio_insuficienciarenalno)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(radio_insuficienciarenalnsnc))
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addComponent(radio_oxigenosangresi)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(radio_oxigenosangreno)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(radio_oxigenosangrensnc))
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addComponent(radio_perdidapesosi)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(radio_perdidapesono)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(radio_perdidapesonsnc))
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addComponent(radio_sudoracionessi)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(radio_sudoracionesno)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(radio_sudoracionesnsnc))
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addComponent(radio_taquicardiasi)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(radio_taquicardiano)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(radio_taquicardiansnc))
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addComponent(radio_tosesputosi)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(radio_tosesputono)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(radio_tosesputonsnc))
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addComponent(radio_tossangresi)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(radio_tossangreno)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(radio_tossangrensnc))
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addComponent(radio_tossecasi)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(radio_tossecano)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(radio_tossecansnc))
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addComponent(radio_trombosissi)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(radio_trombosisno)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(radio_trombosisnsnc))))
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(label_dolortoracico)
-                                                .addComponent(label_disnea))
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addComponent(radio_disneasi)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(radio_disneano)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(radio_disneansnc))
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addComponent(radio_dolortoracicosi)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(radio_dolortoracicono)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(radio_dolortoraciconsnc))
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addComponent(radio_cianosissi)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(radio_cianosisno)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(radio_cianosisnsnc))
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addComponent(radio_broncoespasmosi)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(radio_broncoespasmono)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(radio_broncoespasmonsnc)))))
-                                    .addComponent(jLabel4)
-                                    .addComponent(label_tosesputo)
-                                    .addComponent(label_taquicardia)
-                                    .addComponent(label_sudoraciones))
-                                .addGap(32, 32, 32)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel13)
-                                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(boton_reddefecto)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(boton_cargared)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(label_redcargada))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(label_antecedentesepoc)
+                                    .addComponent(label_embarazo)
+                                    .addComponent(jLabel2)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel8)
-                                            .addComponent(jLabel7)
-                                            .addComponent(jLabel6)
-                                            .addComponent(jLabel3)
-                                            .addComponent(jLabel9)
-                                            .addComponent(jLabel10)
-                                            .addComponent(jLabel11)
-                                            .addComponent(jLabel12))
+                                            .addComponent(label_contaminantesquimicos)
+                                            .addComponent(label_antecedentescancer)
+                                            .addComponent(label_antecedentesasma)
+                                            .addComponent(label_edadavanzada)
+                                            .addComponent(label_contactotuberculosis)
+                                            .addComponent(label_exposicionalergenos)
+                                            .addComponent(label_fumador)
+                                            .addComponent(label_obesidad))
                                         .addGap(18, 18, 18)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(layout.createSequentialGroup()
-                                                .addComponent(radio_tuberculosissi)
+                                                .addComponent(radio_fumadorsi)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(radio_tuberculosisno)
+                                                .addComponent(radio_fumadorno)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(radio_tuberculosisnsnc))
+                                                .addComponent(radio_fumadornsnc))
                                             .addGroup(layout.createSequentialGroup()
-                                                .addComponent(radio_tepsi)
+                                                .addComponent(radio_exposicionalergenossi)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(radio_tepno)
+                                                .addComponent(radio_exposicionalergenosno)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(radio_tepnsnc))
+                                                .addComponent(radio_exposicionalergenosnsnc))
                                             .addGroup(layout.createSequentialGroup()
-                                                .addComponent(radio_neumoniasi)
+                                                .addComponent(radio_contactotuberculosissi)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(radio_neumoniano)
+                                                .addComponent(radio_contactotuberculosisno)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(radio_neumoniansnc))
+                                                .addComponent(radio_contactotuberculosisnsnc))
                                             .addGroup(layout.createSequentialGroup()
-                                                .addComponent(radio_epocsi)
+                                                .addComponent(radio_edadavanzadasi)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(radio_epocno)
+                                                .addComponent(radio_edadavanzadano)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(radio_epocnsnc))
+                                                .addComponent(radio_edadavanzadansnc))
                                             .addGroup(layout.createSequentialGroup()
-                                                .addComponent(radio_asmasi)
+                                                .addComponent(radio_antecedentesasmasi)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(radio_asmano)
+                                                .addComponent(radio_antecedentesasmano)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(radio_asmansnc))
+                                                .addComponent(radio_antecedentesasmansnc))
                                             .addGroup(layout.createSequentialGroup()
-                                                .addComponent(radio_cancersi)
+                                                .addComponent(radio_antecedentescancersi)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(radio_cancerno)
+                                                .addComponent(radio_antecedentescancerno)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(radio_cancernsnc))
+                                                .addComponent(radio_antecedentescancernsnc))
                                             .addGroup(layout.createSequentialGroup()
-                                                .addComponent(radio_derramepleuralsi)
+                                                .addComponent(radio_antecedentesepocsi)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(radio_derramepleuralno)
+                                                .addComponent(radio_antecedentesepocno)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(radio_derramepleuralnsnc))
+                                                .addComponent(radio_antecedentesepocnsnc))
                                             .addGroup(layout.createSequentialGroup()
-                                                .addComponent(radio_ersi)
+                                                .addComponent(radio_contaminantesquimicossi)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(radio_erno)
+                                                .addComponent(radio_contaminantesquimicosno)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(radio_ernsnc))))
-                                    .addComponent(jLabel5)))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(label_redcargada))
-                    .addComponent(jLabel17))
-                .addContainerGap(26, Short.MAX_VALUE))
+                                                .addComponent(radio_contaminantesquimicosnsnc))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(radio_embarazosi)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(radio_embarazono)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(radio_embarazonsnc))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(radio_obesidadsi)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(radio_obesidadno)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(radio_obesidadnsnc))))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addComponent(label_mujer)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(radio_mujersi)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(radio_mujerno)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(radio_mujernsnc))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addComponent(label_gripe)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(radio_gripesi)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(radio_gripeno)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(radio_gripensnc)))
+                                .addGap(32, 32, 32)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(label_perdidapeso)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(label_cianosis)
+                                            .addComponent(label_broncoespasmo)
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(label_oxigenosangre)
+                                                        .addComponent(label_insuficienciarenal)
+                                                        .addComponent(label_fiebre)
+                                                        .addComponent(label_faltaapetito)
+                                                        .addComponent(label_tossangre)
+                                                        .addComponent(label_tosseca)
+                                                        .addComponent(label_trombosis))
+                                                    .addGap(18, 18, 18)
+                                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addGroup(layout.createSequentialGroup()
+                                                            .addComponent(radio_faltaapetitosi)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(radio_faltaapetitono)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(radio_faltaapetitonsnc))
+                                                        .addGroup(layout.createSequentialGroup()
+                                                            .addComponent(radio_fiebresi)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(radio_fiebreno)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(radio_fiebrensnc))
+                                                        .addGroup(layout.createSequentialGroup()
+                                                            .addComponent(radio_insuficienciarenalsi)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(radio_insuficienciarenalno)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(radio_insuficienciarenalnsnc))
+                                                        .addGroup(layout.createSequentialGroup()
+                                                            .addComponent(radio_oxigenosangresi)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(radio_oxigenosangreno)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(radio_oxigenosangrensnc))
+                                                        .addGroup(layout.createSequentialGroup()
+                                                            .addComponent(radio_perdidapesosi)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(radio_perdidapesono)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(radio_perdidapesonsnc))
+                                                        .addGroup(layout.createSequentialGroup()
+                                                            .addComponent(radio_sudoracionessi)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(radio_sudoracionesno)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(radio_sudoracionesnsnc))
+                                                        .addGroup(layout.createSequentialGroup()
+                                                            .addComponent(radio_taquicardiasi)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(radio_taquicardiano)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(radio_taquicardiansnc))
+                                                        .addGroup(layout.createSequentialGroup()
+                                                            .addComponent(radio_tosesputosi)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(radio_tosesputono)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(radio_tosesputonsnc))
+                                                        .addGroup(layout.createSequentialGroup()
+                                                            .addComponent(radio_tossangresi)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(radio_tossangreno)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(radio_tossangrensnc))
+                                                        .addGroup(layout.createSequentialGroup()
+                                                            .addComponent(radio_tossecasi)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(radio_tossecano)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(radio_tossecansnc))
+                                                        .addGroup(layout.createSequentialGroup()
+                                                            .addComponent(radio_trombosissi)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(radio_trombosisno)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(radio_trombosisnsnc))))
+                                                .addGroup(layout.createSequentialGroup()
+                                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(label_dolortoracico)
+                                                        .addComponent(label_disnea))
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addGroup(layout.createSequentialGroup()
+                                                            .addComponent(radio_disneasi)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(radio_disneano)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(radio_disneansnc))
+                                                        .addGroup(layout.createSequentialGroup()
+                                                            .addComponent(radio_dolortoracicosi)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(radio_dolortoracicono)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(radio_dolortoraciconsnc))
+                                                        .addGroup(layout.createSequentialGroup()
+                                                            .addComponent(radio_cianosissi)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(radio_cianosisno)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(radio_cianosisnsnc))
+                                                        .addGroup(layout.createSequentialGroup()
+                                                            .addComponent(radio_broncoespasmosi)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(radio_broncoespasmono)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(radio_broncoespasmonsnc)))))
+                                            .addComponent(jLabel4)
+                                            .addComponent(label_tosesputo)
+                                            .addComponent(label_taquicardia)
+                                            .addComponent(label_sudoraciones))
+                                        .addGap(32, 32, 32)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel13)
+                                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(jLabel8)
+                                                    .addComponent(jLabel7)
+                                                    .addComponent(jLabel6)
+                                                    .addComponent(jLabel3)
+                                                    .addComponent(jLabel9)
+                                                    .addComponent(jLabel10)
+                                                    .addComponent(jLabel11)
+                                                    .addComponent(jLabel12))
+                                                .addGap(18, 18, 18)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addComponent(radio_tuberculosissi)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(radio_tuberculosisno)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(radio_tuberculosisnsnc))
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addComponent(radio_tepsi)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(radio_tepno)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(radio_tepnsnc))
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addComponent(radio_neumoniasi)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(radio_neumoniano)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(radio_neumoniansnc))
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addComponent(radio_epocsi)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(radio_epocno)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(radio_epocnsnc))
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addComponent(radio_asmasi)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(radio_asmano)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(radio_asmansnc))
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addComponent(radio_cancersi)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(radio_cancerno)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(radio_cancernsnc))
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addComponent(radio_derramepleuralsi)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(radio_derramepleuralno)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(radio_derramepleuralnsnc))
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addComponent(radio_ersi)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(radio_erno)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(radio_ernsnc))))
+                                            .addComponent(jLabel5))))))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2039,8 +2109,9 @@ public class VistaPrincipal extends javax.swing.JFrame {
                             .addComponent(radio_fumadornsnc))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(label_redcargada))
+                    .addComponent(boton_cargared)
+                    .addComponent(label_redcargada)
+                    .addComponent(boton_reddefecto))
                 .addContainerGap())
         );
 
@@ -2611,43 +2682,50 @@ public class VistaPrincipal extends javax.swing.JFrame {
         controlador.observacionMujer(2);
     }//GEN-LAST:event_radio_mujernsncMouseClicked
 
+    private void boton_cargaredMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_cargaredMouseClicked
+        //ControladorVistas cv = ControladorVistas.getInstancia();
+        //cv.muestraCargaRed();
+        JFileChooser selector = new JFileChooser();
+        FileNameExtensionFilter filtro=new FileNameExtensionFilter("xdsl","XDSL");
+        selector.setFileFilter(filtro);
+        int seleccion = selector.showOpenDialog(new VistaBuscaRed());
+        if(seleccion == selector.APPROVE_OPTION){
+            File fichero = selector.getSelectedFile();
+            this.controlador.cambiaRed(fichero.getPath());
+            this.reseteaObservaciones();
+            this.label_redcargada.setText("Red cargada: "+fichero.getPath());
+        }
+                
+    }//GEN-LAST:event_boton_cargaredMouseClicked
+
+    private void boton_reddefectoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_reddefectoMouseClicked
+        this.controlador.cambiaRed("./src/main/java/com/marcart/redesbayesianas/computo/red.xdsl");
+        this.reseteaObservaciones();
+        this.label_redcargada.setText("Red cargada por defecto");
+    }//GEN-LAST:event_boton_reddefectoMouseClicked
+    
+    private static double round(double value, int places) {
+        if (places < 0) throw new IllegalArgumentException();
+
+        BigDecimal bd = new BigDecimal(value);
+        bd = bd.setScale(places, RoundingMode.HALF_UP);
+        return bd.doubleValue();
+    }
     /**
      * @param args the command line arguments
-     */
+     
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VistaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VistaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VistaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VistaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
+       
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new VistaPrincipal().setVisible(true);
             }
         });
     }
-
+*/
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton boton_cargared;
+    private javax.swing.JButton boton_reddefecto;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

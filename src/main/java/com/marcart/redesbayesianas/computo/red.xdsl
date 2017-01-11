@@ -91,7 +91,7 @@
 		</cpt>
 		<cpt id="ContaminantesQu_micos">
 			<state id="si" />
-			<state id="nno" />
+			<state id="no" />
 			<probabilities>0.23 0.77</probabilities>
 		</cpt>
 		<cpt id="AntecedentesCancer">

@@ -7,6 +7,7 @@ package com.marcart.redesbayesianas;
 
 import com.marcart.redesbayesianas.interfaz.ControladorVistas;
 
+
 /**
  *
  * @author mario
@@ -17,7 +18,7 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-         ControladorVistas cv = ControladorVistas.getInstancia();
+        ControladorVistas cv = ControladorVistas.getInstancia();
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
